@@ -1,0 +1,101 @@
+include profile
+ block loadStyle
+  link(rel="stylesheet", href="stylesheets/students.css")
+ block loadScript
+  script(src="javascripts/students.js") 
+ block content
+  p.medium-font students
+  div.card.container-fluid
+   div.card-body.border-none
+    div.row
+     div.col-md-3
+      input(type="text" 
+      class="input remove-focus form-control"
+      placeholder="Search"
+      )
+     div.col-md-6
+     div.col-md-3.d-flex
+      button.btn.btn-light.mx-4 Export  
+      button.btn.btn-primary(data-bs-toggle="modal" data-bs-target="#student-modal") Add Students
+  div.modal#student-modal 
+     div.modal-dialog.modal-dialog-centered.modal-lg 
+      div.modal-content
+       div.modal-body
+        h4 students
+        form
+         div.row
+          div.col-md-6
+           div.form-group.mb-3 
+            input(
+                required 
+                type="text"
+                placeholder="Student Name"
+                name="studentName"
+                class="from-control input remove-focus"
+            )
+           div.form-group.mb-3
+            input(
+                required
+                type="Email"
+                placeholder="Student Email"
+                name="studentEmail"
+                class="from-control input remove-focus"
+            )
+           div.form-group.mb-3
+            input(
+                required
+                type="text"
+                placeholder="Student Father"
+                name="studentFather"
+                class="from-control input remove-focus"
+            )
+           div.form-group.mb-3
+            input(
+                required
+                type="date"
+                placeholder="Student Dob"
+                name="studentDob"
+                class="from-control input remove-focus"
+            )
+           div.form-group.mb-3.d-flex
+            button.code.btn.btn-light(type="button") (+91)
+            input(
+                required
+                type="number"
+                placeholder="Student Mobile"
+                name="studentMobile"
+                class="from-control input remove-focus"
+            )
+          div.col-md-6
+           div.form-group.mb-3.d-flex
+            input(
+                required
+                type="text"
+                placeholder="Student Country"
+                name="studentCountry"
+                class="from-control country input remove-focus"
+            )
+           div.form-group.mb-3.d-flex
+            input(
+                required
+                type="text"
+                placeholder="Student State"
+                name="studentState"
+                class="from-control input remove-focus"
+            )
+           div.form-group.mb-3.d-flex
+            input(
+                required
+                type="number"
+                placeholder="Student PinCode"
+                name="studentPinCode"
+                class="from-control input remove-focus"
+            )
+           div.form-group.mb-3.d-flex
+            textarea(
+                required
+                placeholder="Student Address"
+                name="studentAddress"
+                class="from-control input remove-focus"
+            )
+           button.btn.btn-primary.float-end(type="submit") Submit

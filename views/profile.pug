@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        include bootstrap 
+        link(rel="stylesheet",href="stylesheets/profile.css")
+        block loadStyle
+        script(src="javascripts/profile.js") 
+        block loadScript
+        title Homepage
+    body(style="background:#f2f2f2")
+     - const toolbar = [{icon:"fas fa-user-secret",link:"/students"},{icon:"fa fa-user",link:"/teams"},{icon:"fa fa-sign-out-alt",link:"/logout"}]
+     div.sidenav.sidenav-open
+     div.section.section-open
+      nav.navbar.navbar-expand-sm.px-3.py3.bh-white.shadow-sm
+       button.btn.toggler
+        i.fa.fa-align-left
+       ul.navbar-nav.w-100.justify-content-end
+        each menu of toolbar 
+         li.nav-item 
+          button.btn.toolbar.mx-2
+           a.nav-link(href=menu.link) 
+            i(class=menu.icon)
+      div.mx-4.py-3      
+       block content     

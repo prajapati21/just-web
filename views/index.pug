@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        include bootstrap 
+        script(src="javascripts/index.js") 
+        title Homepage 
+    body(style="background:#f7faff")
+     div.container
+      nav.navbar.navbar-expand-sm 
+       img(src="images/sachin.....png", width="120", alt="")
+       ul.navbar-nav.w-100.d-flex.justify-content-end
+        li.nav-item 
+         a.nav-link(
+            href="#"
+             data-bs-toggle="modal"
+            data-bs-target="#login-modal"
+            ) Login 
+        li.nav-item 
+         a.nav-link(
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#signup-modal"
+            ).btn.btn-primary.text-white.mx-3 Signup 
+      div.py-3
+       h1.display-1 ༺ֆǟƈɦɨռ༻
+       p An App to handle students
+      img.float-end(src="images",width="50%" alt="",)  
+      include signup 
+      include login 
